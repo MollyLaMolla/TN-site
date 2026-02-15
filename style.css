@@ -1,519 +1,517 @@
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content:center;
-    padding: 0;
-    font-family: "inter", sans-serif;
-    font-size: 20px;
-    font-weight: normal;
-    margin: 0;
-    height: 100vh;
-    width: 100vw;
-    background-image: url("./images/background-mountain.png");
-    background-size: cover;
-    background-position: center;
-    overflow: hidden; /* Prevent scroll bars during animations */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-family: "inter", sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("./images/background-mountain.webp");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden; /* Prevent scroll bars during animations */
 }
 
 nav {
-    position: absolute;
-    top: 8px;
-    opacity: 0;
-    display: flex;
-    justify-self: start;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(134, 167, 136, 0.9);
-    width: 75%;
-    height: 8%;
-    min-width: 800px;
-    padding: 0 16px;
-    border-radius: 20px;
-    z-index: 1;
+  position: absolute;
+  top: 8px;
+  opacity: 0;
+  display: flex;
+  justify-self: start;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(134, 167, 136, 0.9);
+  width: 75%;
+  height: 8%;
+  min-width: 800px;
+  padding: 0 16px;
+  border-radius: 20px;
+  z-index: 1;
 }
 
 .tn-big-logo {
-    position: absolute;
-    opacity: 0;
-    width: 75%;
-    min-width: 800px;
+  position: absolute;
+  opacity: 0;
+  width: 75%;
+  min-width: 800px;
 }
 
 .icon {
-    width: 48px;
-    height: 48px;
+  width: 48px;
+  height: 48px;
 }
 
 .tn-small-logo {
-    margin: 0;
-    min-width: 232px;
-    width: auto;
-    max-height: 60px;
-    min-height: 50px;
+  margin: 0;
+  min-width: 232px;
+  width: auto;
+  max-height: 60px;
+  min-height: 50px;
 }
 
 .nav-links {
-    display: flex;
-    gap: 72px;
-    height: 48px;
-    width: 100%;
+  display: flex;
+  gap: 72px;
+  height: 48px;
+  width: 100%;
 }
 
 .nav-icons-box {
-    display: flex;
-    gap: 36px;
+  display: flex;
+  gap: 36px;
 }
 
 .search-icon-box {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
 }
 
 input[type="text"] {
-    width: 0;
-    height: 48px;
-    border-radius: 20px;
-    border: none;
-    padding: 0 16px;
-    font-size: 20px;
-    font-weight: 500;
-    transition: width 0.5s ease-in-out, padding 0.5s ease-in-out;
+  width: 0;
+  height: 48px;
+  border-radius: 20px;
+  border: none;
+  padding: 0 16px;
+  font-size: 20px;
+  font-weight: 500;
+  transition:
+    width 0.5s ease-in-out,
+    padding 0.5s ease-in-out;
 }
 
 input[type="text"]:focus {
-    outline: none;
-    width: 100%;
+  outline: none;
+  width: 100%;
 }
 
 .invisible {
-    padding: 0 !important;
-    display: none !important;
-    transition: width 0.5s ease-in-out, padding 0.5s ease-in-out;
+  padding: 0 !important;
+  display: none !important;
+  transition:
+    width 0.5s ease-in-out,
+    padding 0.5s ease-in-out;
 }
 
 .cards-container {
-    position: absolute;
-    bottom: 8px;
-    opacity: 0;
-    display: none;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: rgba(134, 167, 136, 0.75);
-    height: calc(90% - 8px);
-    gap: 16px;
-    padding: 0 16px;
-    border-radius: 20px;
-    width: 75%;
-    min-width: 800px;
+  position: absolute;
+  bottom: 8px;
+  opacity: 0;
+  display: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgba(134, 167, 136, 0.75);
+  height: calc(90% - 8px);
+  gap: 16px;
+  padding: 0 16px;
+  border-radius: 20px;
+  width: 75%;
+  min-width: 800px;
 }
 
-.card{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    opacity: 0;
-    flex: 1;
-    min-width: 340px;
-    max-width: 360px;
-    height: 480px;
-    border-radius: 20px;
-    overflow: hidden;
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  opacity: 0;
+  flex: 1;
+  min-width: 340px;
+  max-width: 360px;
+  height: 480px;
+  border-radius: 20px;
+  overflow: hidden;
+  transition:
+    transform 0.5s ease-in-out,
+    opacity 0.5s ease-in-out;
 }
 
-.card-montagne{
-    box-shadow: -8px 8px 4px 2px rgba(0, 0, 0, 0.2);
+.card-montagne {
+  box-shadow: -8px 8px 4px 2px rgba(0, 0, 0, 0.2);
 }
 
-.card-laghi{
-    box-shadow: 0 8px 4px 2px rgba(0, 0, 0, 0.2);
+.card-laghi {
+  box-shadow: 0 8px 4px 2px rgba(0, 0, 0, 0.2);
 }
 
-.card-paesini{
-    box-shadow: 8px 8px 4px 2px rgba(0, 0, 0, 0.2);
+.card-paesini {
+  box-shadow: 8px 8px 4px 2px rgba(0, 0, 0, 0.2);
 }
 
 .card img {
-    width: 100%;
-    height: auto;
-    border-radius: 0;
-    object-fit: cover;
-    
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  object-fit: cover;
 }
 
 .card-text {
-    background-color: rgba(240, 248, 255, 0.8);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    text-align: center;
+  background-color: rgba(240, 248, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
 
-.card-text p{
-    display: none;
-    color: black;
-    font-family: "Inter", sans-serif;
-    font-size: 20px;
-    text-align: start;
-    font-weight: regular;
-    margin: 10px 0;
-    width: calc(100% - 48px);
+.card-text p {
+  display: none;
+  color: black;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  text-align: start;
+  font-weight: regular;
+  margin: 10px 0;
+  width: calc(100% - 48px);
 }
 
-.card-text h2{
-    width: calc(100% - 48px);
-    margin: 10px 0;
-    font-size: 48px;
-    color: black;
-    display: none;
-    text-align: start;
+.card-text h2 {
+  width: calc(100% - 48px);
+  margin: 10px 0;
+  font-size: 48px;
+  color: black;
+  display: none;
+  text-align: start;
 }
 
 .card-text h1 {
-    font-family: "Imperial Script", serif;
-    color: #86A788;
-    font-weight: 400;
-    font-size: 96px;
+  font-family: "Imperial Script", serif;
+  color: #86a788;
+  font-weight: 400;
+  font-size: 96px;
 }
 
-.align-box{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: start;
-    gap: 16px;
-    width: fit-content;
-    
+.align-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  gap: 16px;
+  width: fit-content;
 }
 
 /* no display */
 
 .not-displayed-text {
-    display: none;
+  display: none;
 }
 
-.not-displayed{
-    display: none;
+.not-displayed {
+  display: none;
 }
 
 /* animation classes*/
 
-.nav-loaded{
-    opacity: 1;
-    animation: nav-slide-in 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+.nav-loaded {
+  opacity: 1;
+  animation: nav-slide-in 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.tn-loaded{
-    opacity: 1;
-    animation: tn-big-logo-slide-in-from-bottom 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-    display: block;
+.tn-loaded {
+  opacity: 1;
+  animation: tn-big-logo-slide-in-from-bottom 1s
+    cubic-bezier(0.075, 0.82, 0.165, 1);
+  display: block;
 }
 
 .tn-slide-out {
-    animation: tn-big-logo-slide-out-to-top 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-    opacity: 0;
-    display: none;
+  animation: tn-big-logo-slide-out-to-top 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  opacity: 0;
+  display: none;
 }
 
 .tn-slide-in {
-    animation: tn-big-logo-slide-in-from-top 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-    opacity: 1;
-    display: block;
+  animation: tn-big-logo-slide-in-from-top 1s
+    cubic-bezier(0.075, 0.82, 0.165, 1);
+  opacity: 1;
+  display: block;
 }
 
 .cards-slide-in {
-    animation: cards-slide-in 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-    opacity: 1;
-    display: flex;
+  animation: cards-slide-in 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  opacity: 1;
+  display: flex;
 }
 
 .cards-slide-out {
-    animation: cards-slide-out 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-    opacity: 0;
-    display: none;
+  animation: cards-slide-out 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  opacity: 0;
+  display: none;
 }
 
 .cards-fade-in {
-    animation: cards-fade-in 0.5s ease-in;
-    display: flex;
-    opacity: 1;
+  animation: cards-fade-in 0.5s ease-in;
+  display: flex;
+  opacity: 1;
 }
 
 .cards-fade-out {
-    animation: cards-fade-out 0.5s ease-in;
-    display: none;
-    opacity: 0;
+  animation: cards-fade-out 0.5s ease-in;
+  display: none;
+  opacity: 0;
 }
 
 .background-blur-in {
-    animation: background-blur-in 1s ease-in-out;
-    backdrop-filter: blur(8px);
+  animation: background-blur-in 1s ease-in-out;
+  backdrop-filter: blur(8px);
 }
 
 .background-blur-out {
-    animation: background-blur-out 1s ease-in-out;
-    backdrop-filter: blur(0);
+  animation: background-blur-out 1s ease-in-out;
+  backdrop-filter: blur(0);
 }
 
 .card-hover-open {
-    animation: card-hover-open 0.5s ease-in-out;
-    height: 720px;
-    
+  animation: card-hover-open 0.5s ease-in-out;
+  height: 720px;
 }
 
 .card-hover-close {
-    animation: card-hover-close 1s ease-in-out;
-    height: 480px;
-    
+  animation: card-hover-close 1s ease-in-out;
+  height: 480px;
 }
 
-.text-fade-out{
-    animation: text-fade-out 1s ease-in-out; 
-    opacity: 0;
-    display: none!important;
+.text-fade-out {
+  animation: text-fade-out 1s ease-in-out;
+  opacity: 0;
+  display: none !important;
 }
 
-.text-fade-in{
-    animation: text-fade-in 0.5s ease-in-out;
-    opacity: 1;
-    display: block!important;
+.text-fade-in {
+  animation: text-fade-in 0.5s ease-in-out;
+  opacity: 1;
+  display: block !important;
 }
 
-.icon-hover-in{
-    animation: icon-hover 0.1s ease-in-out;
-    stroke:rgb(0, 255, 234);
-    stroke-width: 2px;
+.icon-hover-in {
+  animation: icon-hover 0.1s ease-in-out;
+  stroke: rgb(0, 255, 234);
+  stroke-width: 2px;
 }
 
-.icon-hover-out{
-    animation: icon-hover 0.1s ease-in-out reverse;
-    stroke:#FFFDEC;
-    stroke-width: 2;
+.icon-hover-out {
+  animation: icon-hover 0.1s ease-in-out reverse;
+  stroke: #fffdec;
+  stroke-width: 2;
 }
-
 
 /* animations */
 
 @keyframes nav-slide-in {
-    from {
-        transform: translateY(-100vh);
-    }
-    to {
-        transform: translateY(0);
-    }
+  from {
+    transform: translateY(-100vh);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 @keyframes tn-big-logo-slide-in-from-bottom {
-    from {
-        display: none;
-        transform: translateY(100vh); /* Changed from bottom to transform for better performance */
-    }
-    to {
-        transform: translateY(0);
-        display: block;
-    }
+  from {
+    display: none;
+    transform: translateY(
+      100vh
+    ); /* Changed from bottom to transform for better performance */
+  }
+  to {
+    transform: translateY(0);
+    display: block;
+  }
 }
 
 @keyframes tn-big-logo-slide-out-to-top {
-    from {
-        display: block;
-        transform: translateY(0);
-        opacity: 1;
-    }
-    to {
-        display: none;
-        transform: translateY(-100vh);
-        opacity: 0;
-    }
+  from {
+    display: block;
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    display: none;
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
 }
 
 @keyframes tn-big-logo-slide-in-from-top {
-    from {
-        display: none;
-        transform: translateY(-100vh);
-        opacity: 0;
-    }
-    to {
-        display: block;
-        transform: translateY(0);
-        opacity: 1;
-    }
+  from {
+    display: none;
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+  to {
+    display: block;
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes cards-slide-in {
-    from {
-        transform: translateY(100vh);
-        opacity: 0;
-        display: none;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-        display: flex;
-    }
+  from {
+    transform: translateY(100vh);
+    opacity: 0;
+    display: none;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+    display: flex;
+  }
 }
 
 @keyframes cards-slide-out {
-    from {
-        transform: translateY(0);
-        opacity: 1;
-        display: flex;
-    }
-    to {
-        transform: translateY(100vh);
-        opacity: 0;
-        display: none;
-    }
+  from {
+    transform: translateY(0);
+    opacity: 1;
+    display: flex;
+  }
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+    display: none;
+  }
 }
 
 @keyframes cards-fade-in {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes cards-fade-out {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 @keyframes background-blur-in {
-    from {
-        backdrop-filter: blur(0);
-    }
-    to {
-        backdrop-filter: blur(8px);
-    }
+  from {
+    backdrop-filter: blur(0);
+  }
+  to {
+    backdrop-filter: blur(8px);
+  }
 }
 
 @keyframes background-blur-out {
-    from {
-        backdrop-filter: blur(8px);
-    }
-    to {
-        backdrop-filter: blur(0);
-    }
+  from {
+    backdrop-filter: blur(8px);
+  }
+  to {
+    backdrop-filter: blur(0);
+  }
 }
 
 @keyframes card-hover-open {
-    from {
-        height: 480px;
-    }
-    to {
-        height: 720px;
-    }
+  from {
+    height: 480px;
+  }
+  to {
+    height: 720px;
+  }
 }
 
 @keyframes card-hover-close {
-    from {
-        height: 720px;
-    }
-    to {
-        height: 480px;
-    }
+  from {
+    height: 720px;
+  }
+  to {
+    height: 480px;
+  }
 }
 
 @keyframes text-fade-out {
-    from {
-        opacity: 1;
-        display: block;
-    }
-    to {
-        opacity: 0;
-        display: none;
-    }
+  from {
+    opacity: 1;
+    display: block;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
 }
 
 @keyframes text-fade-in {
-    from {
-        opacity: 0;
-        display: none;
-    }
-    to {
-        opacity: 1;
-        display: block;
-    }
+  from {
+    opacity: 0;
+    display: none;
+  }
+  to {
+    opacity: 1;
+    display: block;
+  }
 }
 
 @keyframes background-fade-in {
-    from {
-        backdrop-filter: opacity(0);
-    }
-    to {
-        backdrop-filter: opacity(1);
-    }
+  from {
+    backdrop-filter: opacity(0);
+  }
+  to {
+    backdrop-filter: opacity(1);
+  }
 }
 
 @keyframes background-fade-out {
-    from {
-        backdrop-filter: opacity(0);
-    }
-    to {
-        backdrop-filter: opacity(1);
-    }
+  from {
+    backdrop-filter: opacity(0);
+  }
+  to {
+    backdrop-filter: opacity(1);
+  }
 }
 
 @keyframes icon-hover {
-    from {
-        stroke:#FFFDEC;
-        stroke-width: 2;
-    }
-    to {
-        stroke:rgb(0, 255, 234);
-        stroke-width: 2px;
-    }
+  from {
+    stroke: #fffdec;
+    stroke-width: 2;
+  }
+  to {
+    stroke: rgb(0, 255, 234);
+    stroke-width: 2px;
+  }
 }
-
-
-
-
-
-
 
 /* Media Queries */
 @media (max-width: 1200px) {
-    .invisible-logo {
-        display: none;
-    }
+  .invisible-logo {
+    display: none;
+  }
 }
 
-
 @media (max-width: 900px) {
-    nav {
-        width: 90%;
-        min-width: 0;
-    }
+  nav {
+    width: 90%;
+    min-width: 0;
+  }
 
-    .cards-container {
-        width: 90%;
-        min-width: 0;
-    }
+  .cards-container {
+    width: 90%;
+    min-width: 0;
+  }
 
-    .nav-links {
-        gap: 36px;
-    }
+  .nav-links {
+    gap: 36px;
+  }
 
-    .tn-small-logo {
-        display: none;
-    }
+  .tn-small-logo {
+    display: none;
+  }
 
-    .tn-big-logo {
-        width: 98%;
-        min-width: 0;
-    }
+  .tn-big-logo {
+    width: 98%;
+    min-width: 0;
+  }
 }
